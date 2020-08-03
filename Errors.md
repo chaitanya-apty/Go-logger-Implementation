@@ -19,7 +19,7 @@ Before getting started Ill try to explain the basic architecture of this project
  #### <ins>3 Layer Architecture</ins>
 | Layer | Purpose  | # Example File |
 | ------- | --- | --- |
-| Handler | Validates Request, gets required data from lower layers | [accounts.handler.go](https://github.com/chaitanya-apty/Go-logger-Implementation/blob/master/accounts/handler/accounts.handler) |
+| Handler | Validates Request, gets required data from lower layers | [accounts.handler.go](https://github.com/chaitanya-apty/Go-logger-Implementation/blob/master/accounts/handler/accounts-handler.go) |
 | Service | Middle man btw 1 & 3 layers, handles errors, transforms data | [accounts.service](https://github.com/chaitanya-apty/Go-logger-Implementation/blob/master/accounts/handler/accounts-service.go) |
 | Repo | Queries Database/ Make other http requests(If in a micro-service) | [accounts.repo](https://github.com/chaitanya-apty/Go-logger-Implementation/blob/master/accounts/repo/accounts-repo.go) |
 
@@ -27,11 +27,11 @@ Before getting started Ill try to explain the basic architecture of this project
 -   Short story 😅, Independent of frameworks and testability
 -   Long story 🥺 , [Read here](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 
-### Handling errors gracefully
+## Handling errors gracefully
 <b>Ill try to explain in 3 stages how Customized errors can be implemented with maintaing type checks</b>
 
 <i>[You can jump here](https://github.com/chaitanya-apty/Go-logger-Implementation/blob/master/errors/errors.go) for the full code </i>
-1.   Create Custom defined Struct in order to wrap error
+1.   `Create Custom defined Struct in order to wrap error`
 ```
     type Operation string // Contains the names of functions
 
@@ -50,7 +50,7 @@ Before getting started Ill try to explain the basic architecture of this project
         error error // Actual Error
     }
 ```
-2. Defining Some Helpers for getting and setting values
+2. `Defining Some Helpers for getting and setting values`
 ```
     func NewError(operation Operation, errorType ErrorType, err error) *Error{
 	return &Error{
@@ -69,7 +69,7 @@ Before getting started Ill try to explain the basic architecture of this project
 	    return e.operations
     }
 ```
-3. Implement In Code
+3. `Implement In Code`
     
     -   First, Catch and Create Error Object
     ```

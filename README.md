@@ -1,8 +1,7 @@
 # Custom Error Logging in Golang
-Basic Implementation of loggin in Go (A Proposal) with <b>UberZap</b>
 
 ## Getting Started
-Motivation for this project is to demonstrate basic design/approach in logging and propogating Customized Errors in Go Application
+Motivation for this project is to demonstrate simple design/approach in logging and propogating Customized Errors in Go Application
 
 ### Prerequisites
  - Not required to be a pro in Go

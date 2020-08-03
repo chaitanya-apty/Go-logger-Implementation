@@ -19,8 +19,8 @@ Before getting started Ill try to explain the basic architecture of this project
  #### <ins>3 Layer Architecture</ins>
 | Layer | Purpose  | # Example File |
 | ------- | --- | --- |
-| Handler | Validates Request, gets required data from lower layers | [accounts.handler.go](https://github.com/chaitanya-apty/Go-logger-Implementation/blob/master/accounts/handler/accounts-handler.go) |
-| Service | Middle man btw 1 & 3 layers, handles errors, transforms data | [accounts.service](https://github.com/chaitanya-apty/Go-logger-Implementation/blob/master/accounts/handler/accounts-service.go) |
+| Handler | Validates Request, gets required data from lower layers | [accounts.handler](https://github.com/chaitanya-apty/Go-logger-Implementation/blob/master/accounts/handler/accounts-handler.go) |
+| Service | Middle man btw 1 & 3 layers, handles errors, transforms data | [accounts.service](https://github.com/chaitanya-apty/Go-logger-Implementation/blob/master/accounts/service/accounts-service.go) |
 | Repo | Queries Database/ Make other http requests(If in a micro-service) | [accounts.repo](https://github.com/chaitanya-apty/Go-logger-Implementation/blob/master/accounts/repo/accounts-repo.go) |
 
 #### Advantages of this Pattern

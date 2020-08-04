@@ -1,7 +1,7 @@
 # Custom Error Logging in Golang
 
 ## Getting Started
-Motivation for this project is to demonstrate simple design/approach in logging and propogating Customized Errors in Go Application
+Motivation for this project is to demonstrate simple design/approach in logging and propogating [Customized Errors](https://github.com/chaitanya-apty/Go-logger-Implementation/blob/master/Errors.md#handling-errors-gracefully) in Go Application
 
 ### Prerequisites
  - Not required to be a pro in Go
